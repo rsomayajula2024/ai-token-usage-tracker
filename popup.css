@@ -1,0 +1,148 @@
+* { box-sizing: border-box; }
+
+body {
+  width: 380px;
+  margin: 0;
+  padding: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #1f1f23;
+  background: #fafafa;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+h1 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: 600;
+}
+
+#resetBtn {
+  font-size: 12px;
+  padding: 4px 10px;
+  border: 1px solid #d8d8dc;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #6b6b70;
+}
+#resetBtn:hover {
+  background: #f0f0f2;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ececee;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.card-label {
+  font-size: 11px;
+  color: #8a8a90;
+  margin-bottom: 4px;
+}
+
+.card-value {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.service-breakdown {
+  background: #fff;
+  border: 1px solid #ececee;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+}
+
+.service-row {
+  display: flex;
+  align-items: center;
+  padding: 4px 0;
+  font-size: 13px;
+}
+
+.service-name {
+  flex: 1;
+  margin-left: 8px;
+  font-weight: 500;
+}
+
+.service-value {
+  color: #6b6b70;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot.claude { background: #d97757; }
+.dot.chatgpt { background: #10a37f; }
+
+.chart-section {
+  background: #fff;
+  border: 1px solid #ececee;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+}
+
+.chart-title {
+  font-size: 12px;
+  color: #8a8a90;
+  margin-bottom: 6px;
+}
+
+canvas {
+  width: 100%;
+  height: 140px;
+  display: block;
+}
+
+.legend {
+  display: flex;
+  gap: 14px;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #6b6b70;
+}
+.legend span { display: flex; align-items: center; gap: 5px; }
+
+.secondary-btn {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  font-size: 12.5px;
+  border: 1px solid #d8d8dc;
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #1f1f23;
+}
+.secondary-btn:hover {
+  background: #f0f0f2;
+}
+
+footer {
+  font-size: 10.5px;
+  color: #a3a3a8;
+  text-align: center;
+  line-height: 1.4;
+}

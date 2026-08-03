@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Token Usage Dashboard</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <h1>Token Usage</h1>
+    <button id="resetBtn" title="Clear all recorded data">Reset</button>
+  </header>
+
+  <section class="summary-grid">
+    <div class="card">
+      <div class="card-label">Today</div>
+      <div class="card-value" id="todayTotal">0</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Last 7 days</div>
+      <div class="card-value" id="weekTotal">0</div>
+    </div>
+    <div class="card">
+      <div class="card-label">All time</div>
+      <div class="card-value" id="allTimeTotal">0</div>
+    </div>
+  </section>
+
+  <section class="service-breakdown">
+    <div class="service-row">
+      <span class="dot claude"></span>
+      <span class="service-name">Claude</span>
+      <span class="service-value" id="claudeTotal">0 tokens</span>
+    </div>
+    <div class="service-row">
+      <span class="dot chatgpt"></span>
+      <span class="service-name">ChatGPT</span>
+      <span class="service-value" id="chatgptTotal">0 tokens</span>
+    </div>
+  </section>
+
+  <section class="chart-section">
+    <div class="chart-title">Last 7 days</div>
+    <canvas id="chart" width="360" height="140"></canvas>
+    <div class="legend">
+      <span><span class="dot claude"></span>Claude</span>
+      <span><span class="dot chatgpt"></span>ChatGPT</span>
+    </div>
+  </section>
+
+  <button id="showWidgetBtn" class="secondary-btn">Show on-page widget</button>
+
+  <footer>
+    Estimates only — approximated from message length, not exact billed token counts.
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
